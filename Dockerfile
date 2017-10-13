@@ -36,14 +36,5 @@ RUN pip install --upgrade --user pip
 RUN pip install --user rpy2==2.8.0
 RUN pip install --user jupyter
 COPY visit2_12_3.linux-x86_64/ $HOME/visit2
-# COPY my-dogstar/ $HOME/my-dogstar
-# USER root
-# RUN chown -R mark $HOME/my-dogstar 
-#USER mark
-#RUN cd $HOME/my-dogstar && ./autogen.sh && \
-#CC=mpicc CFLAGS="-fPIC $(/home/mark/local/adios/bin/adios_config -c )" \
-#LDFLAGS="$(/home/mark/local/adios/bin/adios_config -l) -ggdb -fPIC" \
-#./configure --prefix=/home/mark/local/dogstar --with-adios_dir=/home/mark/local/adios/ && \
-#make install
 
 
